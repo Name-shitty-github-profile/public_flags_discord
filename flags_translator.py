@@ -14,4 +14,11 @@ def translate(flag: int):
     2: 'PARTNER',
     1: 'STAFF'
   }
-  return flags[flag]
+ userflags = []
+
+  while flag != 0:
+    for item in flags.keys():
+        if flag >= item:
+            userflags.append(flags[item])
+            flag = flag - item
+  return userflags
