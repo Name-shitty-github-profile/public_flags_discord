@@ -20,5 +20,5 @@ def translate(flag: int):
     for item in flags.keys():
         if flag >= item:
             userflags.append(flags[item])
-            flag = flag - item
+            flag -= item
   return userflags
